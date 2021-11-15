@@ -1,14 +1,16 @@
 <?php
-    $items = [
-        [
+    $items = [       
             ["class"=>["breadcrumb-item"], "href"=> "#", "text"=>"Главная"],
             ["class"=>["breadcrumb-item"], "href"=> "#", "text" => "PHP"],
             ["class"=>["breadcrumb-item", "active"], "href"=> "#", "text"=>"Функции"]
-        ]        
     ];
+
+    $last = array_pop($items);
+
     function JoinData($item){
         return implode(' ', $item["class"]);
     }
+
 ?>    
 <!DOCTYPE html>
 <html lang="en">
@@ -44,10 +46,11 @@
                     </div>
                     <div class="panel-container show">
                         <div class="panel-content">
-                            <ol class="breadcrumb page-breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                                <li class="breadcrumb-item"><a href="#">PHP</a></li>
-                                <li class="breadcrumb-item active">Функции</li>
+                            <ol class="breadcrumb page-breadcrumb">                            
+                            <?php foreach($items as $item):?>
+                                <li class="<?php echo JoinData($item); ?>"><a href="<?php echo $item["href"]; ?>"><?php echo $item["text"]; ?></a></li>
+                            <?php endforeach; ?>
+                            <li class="<?php echo JoinData($last); ?>"><?php echo $last["text"]; ?></li>
                             </ol>
                         </div>
                     </div>
