@@ -1,3 +1,15 @@
+<?php
+    $items = [
+        [
+            ["class"=>["breadcrumb-item"], "href"=> "#", "text"=>"Главная"],
+            ["class"=>["breadcrumb-item"], "href"=> "#", "text" => "PHP"],
+            ["class"=>["breadcrumb-item", "active"], "href"=> "#", "text"=>"Функции"]
+        ]        
+    ];
+    function JoinData($item){
+        return implode(' ', $item["class"]);
+    }
+?>    
 <!DOCTYPE html>
 <html lang="en">
 <head>
