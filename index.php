@@ -4,6 +4,11 @@
             ["href"=> "description_task_1.php", "text"=>"Описание"],
             ["href"=> "task_1.html", "text" => "Задача"],
             ["href"=> "solution_task_1.php", "text"=>"Решение"]
+        ],
+        [
+            ["href"=> "description_task_2.php", "text"=>"Описание"],
+            ["href"=> "task_2.html", "text" => "Задача"],
+            ["href"=> "solution_task_2.php", "text"=>"Решение"]
         ]
     ];
 ?>
