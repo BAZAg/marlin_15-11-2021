@@ -1,3 +1,18 @@
+<?php
+    $items = [       
+            ["data"=> ["reports", "file"], "text"=>"Reports"],
+            ["data"=> ["analytics", "graphs"], "text"=>"Analytics"],
+            ["data"=> ["export", "download"], "text"=>"Export"],  
+            ["data"=> ["storage"], "text"=>"Storage"]
+    ];
+
+    function JoinData($item){
+        return implode(' ', $item["data"]);
+    }
+
+   
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
