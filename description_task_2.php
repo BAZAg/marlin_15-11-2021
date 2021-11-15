@@ -33,7 +33,7 @@
                     <div class="panel-container show">
                         <div class="panel-content">
                             <div class="fs-lg fw-300 p-5 bg-white border-faded rounded mb-g">
-                            <h2>Privacy</h2>
+                            <h2>Задание 2</h2>
                             <p class="mb-g">
                                 Сформировать массив элементов. Вывести при помощи цикла foreach
                             </p>
