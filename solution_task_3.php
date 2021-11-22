@@ -1,15 +1,23 @@
 <?php
+    // Вариант 1. Отбрасываю последний элемент в отдельную переменную
     $items = [       
-            ["class"=>["breadcrumb-item"], "href"=> "#", "text"=>"Главная"],
+            ["class"=>["breadcrumb-item"], "href"=> "index.php", "text"=>"Главная"],
             ["class"=>["breadcrumb-item"], "href"=> "#", "text" => "PHP"],
             ["class"=>["breadcrumb-item", "active"], "href"=> "#", "text"=>"Функции"]
     ];
-
     $last = array_pop($items);
 
     function JoinData($item){
         return implode(' ', $item["class"]);
     }
+    // Вариант 2. Добавление поля отвечающего элемент ссылка или нет
+    $items_new = [       
+        ["is_link"=>true, "class"=>["breadcrumb-item"], "href"=> "index.php", "text"=>"Главная"],
+        ["is_link"=>true, "class"=>["breadcrumb-item"], "href"=> "#", "text" => "PHP"],
+        ["is_link"=>false, "class"=>["breadcrumb-item", "active"], "href"=> "#", "text"=>"Функции"]
+    ];
+
+    
 
 ?>    
 <!DOCTYPE html>
@@ -51,6 +59,19 @@
                                 <li class="<?php echo JoinData($item); ?>"><a href="<?php echo $item["href"]; ?>"><?php echo $item["text"]; ?></a></li>
                             <?php endforeach; ?>
                             <li class="<?php echo JoinData($last); ?>"><?php echo $last["text"]; ?></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="panel-container show">
+                        <div class="panel-content">
+                            <ol class="breadcrumb page-breadcrumb">                            
+                                <?php foreach($items_new as $item):?>
+                                    <?php if($item["is_link"]):?>
+                                        <li class="<?php echo JoinData($item); ?>"><a href="<?php echo $item["href"]; ?>"><?php echo $item["text"]; ?></a></li>
+                                    <?php else: ?>
+                                        <li class="<?php echo JoinData($item); ?>"><?php echo $item["text"]; ?></li>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>                            
                             </ol>
                         </div>
                     </div>
