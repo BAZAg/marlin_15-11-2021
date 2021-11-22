@@ -32,8 +32,13 @@
                         </div>
                     </div>
                     <div class="panel-container show">
-                        <p style=""><img src="https://i.ibb.co/sKTfDrj/task-1.png" style="width: 800px;"></p>
-                    </div>
+                        <p class="page-content"><img src="https://i.ibb.co/sKTfDrj/task-1.png" style="width: 800px;"></p>
+                        <p class="page-content">При вводе данных в форму JS скрывает элементы и отображает только те, которые соответствуют фильтру.</br>
+                            Значит, нужно предусмотреть добавление фильтров в массиве.</br>
+                            Так как одной строчке может соответствовать несколько фильтров, значит должны работать с массивом.</br>
+                            В видео Рахим говорил о том, что можно в одном поле содержать все фильтры (теги).</br>
+                        </p>
+                    </div>                    
                 </div>
             </div>
         </main>
