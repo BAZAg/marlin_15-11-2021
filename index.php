@@ -43,7 +43,15 @@
             ["href"=> "solution_task_8.php", "text"=>"Решение"],
             ["href"=> "db_task_8.json", "text"=>"json"]
 
+        ],
+        [
+            ["href"=> "description_task_9.php", "text"=>"Описание"],
+            ["href"=> "task_9.html", "text" => "Задача"],
+            ["href"=> "solution_task_9.php", "text"=>"Решение"],
+            ["href"=> "db_task_9.json", "text"=>"json"]
+
         ]
+
     ];
 ?>
 
