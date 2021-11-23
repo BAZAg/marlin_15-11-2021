@@ -2,7 +2,7 @@
     session_start();
     
     if(!isset($_SESSION["user"]["email"])) {
-        header('Location: solution_task_11.php');// не авторизованы - уходим на авторизацию
+        header('Location: solution_task_14.php');// не авторизованы - уходим на авторизацию
         exit;
     }
 
@@ -11,7 +11,7 @@
     }
     function Logout(){
         unset($_SESSION["user"]);
-        header('Location: solution_task_11.php');
+        header('Location: solution_task_14.php');
         exit;
     }
     
@@ -58,7 +58,7 @@
                                     <div class="alert alert-success fade show" role="alert">
                                         Здравствуйте, <?php echo $_SESSION["user"]["email"] ?>
                                     </div>
-                                    <a href="solution_task_14.php?logout=1" class="btn btn-info">Выйти</a>
+                                    <a href="solution_task_14_1.php?logout=1" class="btn btn-info">Выйти</a>
                                 </div>
                             </div>
                         </div>
