@@ -6,7 +6,7 @@
     "twitter": "@myplaneticket",
     "job": "UI\/UX Expert",
     "branch": "Lead Author",
-    "is_ban": true
+    "is_ban": false
 }, {
     "image": "img\/demo\/authors\/josh.png",
     "login": "Walapa",
@@ -33,5 +33,5 @@
     "twitter": "@sildur",
     "job": "Rails Developer",
     "branch": "Partner &amp; Contributor",
-    "is_ban": false
+    "is_ban": true
 }]
