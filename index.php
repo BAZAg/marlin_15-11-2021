@@ -76,6 +76,12 @@
             ["href"=> "task_13.html", "text" => "Задача"],
             ["href"=> "solution_task_13.php", "text"=>"Решение"]
 
+        ],
+        [
+            ["href"=> "description_task_14.php", "text"=>"Описание"],
+            ["href"=> "task_14.html", "text" => "Задача"],
+            ["href"=> "solution_task_14.php", "text"=>"Решение"]
+
         ]
 
     ];
