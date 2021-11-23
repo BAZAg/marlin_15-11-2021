@@ -1,0 +1,21 @@
+[{
+    "id": 1,
+    "First_Name": "Mark",
+    "Last_Name": "Otto",
+    "Username": "@mdo"
+}, {
+    "id": 2,
+    "First_Name": "Jacob",
+    "Last_Name": "Thornton",
+    "Username": "@fat"
+}, {
+    "id": 3,
+    "First_Name": "Larry",
+    "Last_Name": "the Bird",
+    "Username": "@twitter"
+}, {
+    "id": 4,
+    "First_Name": "Larry the Bird",
+    "Last_Name": "Bird",
+    "Username": "@twitter"
+}]
