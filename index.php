@@ -29,6 +29,13 @@
             ["href"=> "description_task_6.php", "text"=>"Описание"],
             ["href"=> "task_6.html", "text" => "Задача"],
             ["href"=> "solution_task_6.php", "text"=>"Решение"]
+        ],
+        [
+            ["href"=> "description_task_7.php", "text"=>"Описание"],
+            ["href"=> "task_7.html", "text" => "Задача"],
+            ["href"=> "solution_task_7.php", "text"=>"Решение"],
+            ["href"=> "db_users.json", "text"=>"json"]
+
         ]
     ];
 ?>
