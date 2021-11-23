@@ -1,5 +1,9 @@
 <?php
     session_start();
+    if(isset($_SESSION["user"]["email"])) {
+        header('Location: solution_task_14_1.php');// если авторизованы - идём на страничку на которой можно нажать выход
+        exit;
+    }
     function GetData(){
         return json_decode(file_get_contents('db_task_14.json'), true);
     }
@@ -32,6 +36,10 @@
         if(!(CheckEmail($_POST["email"]) && CheckPassword($_POST["email"], $_POST["password"]))) {
             $_SESSION["message"] = "Неправильная почта или пароль";
             unset($_SESSION["user"]);
+        }
+        else {
+            header('Location: solution_task_14_1.php');// если авторизованы - идём на страничку на которой можно нажать выход
+            exit;
         }
     }
 ?>
