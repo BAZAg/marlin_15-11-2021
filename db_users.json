@@ -1,0 +1,37 @@
+[{
+    "image": "img\/demo\/authors\/sunny.png",
+    "login": "myorange",
+    "firstname": "Sunny",
+    "lastname": "Aw",
+    "twitter": "@myplaneticket",
+    "job": "UI\/UX Expert",
+    "branch": "Lead Author",
+    "is_ban": true
+}, {
+    "image": "img\/demo\/authors\/josh.png",
+    "login": "Walapa",
+    "firstname": "Jos",
+    "lastname": "Ko",
+    "twitter": "@atlantez",
+    "job": "ASP.NET Developer",
+    "branch": "Partner &amp; Contributor",
+    "is_ban": false
+}, {
+    "image": "img\/demo\/authors\/jovanni.png",
+    "login": "lodev09",
+    "firstname": "Jovanni",
+    "lastname": "Lo",
+    "twitter": "@lodev09",
+    "job": "PHP Developer",
+    "branch": "Partner &amp; Contributor",
+    "is_ban": true
+}, {
+    "image": "img\/demo\/authors\/jovanni.png",
+    "login": "sildur",
+    "firstname": "Roberto",
+    "lastname": "Ra",
+    "twitter": "@sildur",
+    "job": "Rails Developer",
+    "branch": "Partner &amp; Contributor",
+    "is_ban": false
+}]
