@@ -1,3 +1,73 @@
+<?php
+    $items = [       
+        [
+            "image"=>"img/demo/authors/sunny.png",
+            "login"=>"myorange",
+            "firstname"=>"Sunny",
+            "lastname"=>"Aw",
+            "twitter"=>"@myplaneticket",
+            "job"=>"UI/UX Expert",
+            "branch"=>"Lead Author",
+            "is_ban" => false
+        ],
+        [
+            "image"=>"img/demo/authors/josh.png",
+            "login"=>"Walapa",
+            "firstname"=>"Jos",
+            "lastname"=>"Ko",
+            "twitter"=>"@atlantez",
+            "job"=>"ASP.NET Developer",
+            "branch"=>"Partner &amp; Contributor",
+            "is_ban" => false
+        ], 
+        [
+            "image"=>"img/demo/authors/jovanni.png",
+            "login"=>"lodev09", 
+            "firstname"=>"Jovanni",
+            "lastname"=>"Lo",
+            "twitter"=>"@lodev09",
+            "job"=>"PHP Developer",
+            "branch"=>"Partner &amp; Contributor",
+            "is_ban" => false
+        ],
+        [
+            "image"=>"img/demo/authors/jovanni.png",
+            "login"=>"sildur", 
+            "firstname"=>"Roberto",
+            "lastname"=>"Ra",
+            "twitter"=>"@sildur",
+            "job"=>"Rails Developer",
+            "branch"=>"Partner &amp; Contributor",
+            "is_ban" => false
+        ]
+    ];   
+
+    function JoinData($item){
+        return implode(' ', $item["class"]);
+    }
+    
+    function PrintFio($person){
+        $ch = ucfirst($person["lastname"]);
+        echo $person["firstname"].' '.$ch[0].'.';
+    }
+   
+?>    
+
+<?php function PrintUserData ($person){ ?> 
+    <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
+        <img src="<?php echo $person["image"]; ?>" alt="<?php PrintFio($person); ?>" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
+        <div class="ml-2 mr-3">
+            <h5 class="m-0">
+                <?php PrintFio($person); ?> (<?php echo $person["job"]; ?>)
+                <small class="m-0 fw-300">
+                    <?php echo $person["branch"]; ?>
+                </small>
+            </h5>
+            <a href="https://twitter.com/<?php echo $person["twitter"]; ?>" class="text-info fs-sm" target="_blank"><?php echo $person["twitter"]; ?></a> -
+            <a href="https://wrapbootstrap.com/user/<?php echo $person["login"]; ?>" class="text-info fs-sm" target="_blank" title="Contact <?php echo $person["firstname"]; ?>"><i class="fal fa-envelope"></i></a>
+        </div>
+    </div>
+<?php } ?>  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,59 +103,8 @@
                     <div class="panel-container show">
                         <div class="panel-content">
                            <div class="d-flex flex-wrap demo demo-h-spacing mt-3 mb-3">
-                            <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
-                                <img src="img/demo/authors/sunny.png" alt="Sunny A." class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
-                                <div class="ml-2 mr-3">
-                                    <h5 class="m-0">
-                                        Sunny A. (UI/UX Expert)
-                                        <small class="m-0 fw-300">
-                                            Lead Author
-                                        </small>
-                                    </h5>
-                                    <a href="https://twitter.com/@myplaneticket" class="text-info fs-sm" target="_blank">@myplaneticket</a> -
-                                    <a href="https://wrapbootstrap.com/user/myorange" class="text-info fs-sm" target="_blank" title="Contact Sunny"><i class="fal fa-envelope"></i></a>
-                                </div>
+                                <?php foreach($items as $item) PrintUserData($item); ?>                            
                             </div>
-                            <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
-                                <img src="img/demo/authors/josh.png" alt="Jos K." class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
-                                <div class="ml-2 mr-3">
-                                    <h5 class="m-0">
-                                        Jos K. (ASP.NET Developer)
-                                        <small class="m-0 fw-300">
-                                            Partner &amp; Contributor
-                                        </small>
-                                    </h5>
-                                    <a href="https://twitter.com/@atlantez" class="text-info fs-sm" target="_blank">@atlantez</a> -
-                                    <a href="https://wrapbootstrap.com/user/Walapa" class="text-info fs-sm" target="_blank" title="Contact Jos"><i class="fal fa-envelope"></i></a>
-                                </div>
-                            </div>
-                            <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
-                                <img src="img/demo/authors/jovanni.png" alt="Jovanni Lo" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
-                                <div class="ml-2 mr-3">
-                                    <h5 class="m-0">
-                                        Jovanni L. (PHP Developer)
-                                        <small class="m-0 fw-300">
-                                            Partner &amp; Contributor
-                                        </small>
-                                    </h5>
-                                    <a href="https://twitter.com/@lodev09" class="text-info fs-sm" target="_blank">@lodev09</a> -
-                                    <a href="https://wrapbootstrap.com/user/lodev09" class="text-info fs-sm" target="_blank" title="Contact Jovanni"><i class="fal fa-envelope"></i></a>
-                                </div>
-                            </div>
-                            <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
-                                <img src="img/demo/authors/roberto.png" alt="Jovanni Lo" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
-                                <div class="ml-2 mr-3">
-                                    <h5 class="m-0">
-                                        Roberto R. (Rails Developer)
-                                        <small class="m-0 fw-300">
-                                            Partner &amp; Contributor
-                                        </small>
-                                    </h5>
-                                    <a href="https://twitter.com/@sildur" class="text-info fs-sm" target="_blank">@sildur</a> -
-                                    <a href="https://wrapbootstrap.com/user/sildur" class="text-info fs-sm" target="_blank" title="Contact Roberto"><i class="fal fa-envelope"></i></a>
-                                </div>
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </div>
