@@ -5,7 +5,7 @@
     }
     function AddData($line){
         $data = GetData();
-        $data[] = ["id"=> md5($line["email"].$line["password"]), "email" => $line["email"], "password"=>password_hash($line["password"])];
+        $data[] = ["id"=> md5($line["email"].$line["password"]), "email" => $line["email"], "password"=>password_hash($line["password"], PASSWORD_BCRYPT)];
         file_put_contents('db_task_11.json', json_encode($data,true));
     }
 
