@@ -31,6 +31,9 @@
                         </div>
                     </div>
                     <div class="panel-container show">
+                    <div class="panel-content">
+                        Нобходимо этих чудиков вывести с помощью цикла и массива</br>                        
+                    </div>
                         <div class="panel-content">
                            <div class="d-flex flex-wrap demo demo-h-spacing mt-3 mb-3">
                             <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
