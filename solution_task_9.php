@@ -1,6 +1,4 @@
 <?php
-    $items = GetData(); // в это место подать функцию которая берет данные с MySQL
-       
     function GetData(){
         return json_decode(file_get_contents('db_task_9.json'), true);
     }
