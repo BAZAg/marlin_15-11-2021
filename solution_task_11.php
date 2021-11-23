@@ -1,5 +1,10 @@
 <?php
     session_start();
+
+    if(isset($_SESSION["user"]["email"])) {
+        header('Location: solution_task_14_1.php');// если авторизованы - идём на страничку на которой можно нажать выход
+        exit;
+    }
     function GetData(){
         return json_decode(file_get_contents('db_task_11.json'), true);
     }
